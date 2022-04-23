@@ -6,10 +6,9 @@
   "license": "CC BY 4.0",
   "private": true,
   "scripts": {
-    "lint": "run-s lint:prettier lint:eslint lint:jsonschema",
+    "lint": "run-s lint:prettier lint:eslint",
     "lint:prettier": "prettier --check .",
     "lint:eslint": "eslint --fix-dry-run .",
-    "lint:jsonschema": "ajv -s v3/schema/core.json -d v3/data/core.json && ajv -s v3/schema/packages.json -d v3/data/packages.json && ajv -s v3/schema/scripts.json -d v3/data/scripts.json",
     "fix": "run-s fix:typedef fix:prettier fix:eslint",
     "fix:prettier": "prettier --write .",
     "fix:eslint": "eslint --fix .",
@@ -17,7 +16,6 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "ajv-cli": "^5.0.0",
     "eslint": "^8.13.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^8.5.0",
