@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "definitions": {
+    "dataFile": {
+      "type": "object",
+      "description": "Information about json file",
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "Relative path of a file"
+        },
+        "modified": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Update date and time of the file"
+        }
+      },
+      "required": ["path", "modified"],
+      "additionalProperties": false
+    }
+  },
+  "properties": {
+    "core": {
+      "$ref": "#/definitions/dataFile"
+    },
+    "convert": {
+      "$ref": "#/definitions/dataFile"
+    },
+    "packages": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/dataFile"
+      }
+    },
+    "scripts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/dataFile"
+      }
+    }
+  },
+  "required": ["core", "convert", "packages", "scripts"],
+  "additionalProperties": false
+}
