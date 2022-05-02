@@ -2,7 +2,7 @@
   "name": "apm-schema",
   "version": "3.0.0",
   "repository": "https://github.com/team-apm/apm-schema.git",
-  "author": "team-apm",
+  "author": "Team apm",
   "license": "CC BY 4.0",
   "private": true,
   "scripts": {
