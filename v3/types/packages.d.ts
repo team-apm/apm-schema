@@ -76,6 +76,10 @@ export interface Packages {
      * Niconi Commons ID (not yet implemented)
      */
     nicommons?: string;
+    /**
+     * If this is true, this package will not be visible until it is installed
+     */
+    isHidden?: boolean;
     files: {
       /**
        * The name of the file used in the package
