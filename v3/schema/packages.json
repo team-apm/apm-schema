@@ -97,6 +97,10 @@
             "type": "string",
             "description": "Niconi Commons ID (not yet implemented)"
           },
+          "isHidden": {
+            "type": "boolean",
+            "description": "If this is true, this package will not be visible until it is installed"
+          },
           "files": {
             "type": "array",
             "items": {
