@@ -13,7 +13,8 @@
     "fix:prettier": "prettier --write .",
     "fix:eslint": "eslint --fix .",
     "fix:typedef": "json2ts v3/schema/core.json v3/types/core.d.ts && json2ts v3/schema/packages.json v3/types/packages.d.ts && json2ts v3/schema/scripts.json v3/types/scripts.d.ts && json2ts v3/schema/list.json v3/types/list.d.ts && json2ts v3/schema/convert.json v3/types/convert.d.ts",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "release": "release-it"
   },
   "devDependencies": {
     "eslint": "^8.26.0",

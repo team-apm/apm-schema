@@ -1,0 +1,11 @@
+{
+  "git": {
+    "requireCleanWorkingDir": false,
+    "requireUpstream": false,
+    "tagAnnotation": "v${version}",
+    "push": false
+  },
+  "npm": {
+    "publish": false
+  }
+}
