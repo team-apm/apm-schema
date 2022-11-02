@@ -2,6 +2,7 @@
   "git": {
     "requireCleanWorkingDir": false,
     "requireUpstream": false,
+    "commitMessage": "chore(release): ${version}",
     "tagAnnotation": "v${version}",
     "push": false
   },
