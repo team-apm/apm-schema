@@ -6,26 +6,29 @@
  */
 
 export interface Packages {
+  /**
+   * The current schema version is '3'.
+   */
   version: number;
   packages: {
     /**
-     * The ID of the package (Non-duplicated alphanumeric characters. Use a file name that represents the package. If there is no representative name, use the archive file name. If there is a possibility of duplication, such as only one word, prefix it with the developer's name.)
+     * ID to identify the package. {A: author name in alphanumeric character}/{B: camelcase package name without version number in alphanumeric character}. A: Alphanumeric author names are guessed from the IDs and URLs of social networking sites including Github. If not known, convert the Japanese author name to English or Roman characters. B: Use a file name that represents the package. If there is no representative name, use the archive file name. The words 'AviUtl', 'plugin', and 'script' are redundant and unnecessary.
      */
     id: string;
     /**
-     * The name of the package (Up to 25 characters)
+     * The name of the package to display (Up to 25 characters). The words 'AviUtl', 'plugin', and 'script' are redundant and unnecessary.
      */
     name: string;
     /**
-     * The overview of the package (Up to 35 characters)
+     * The overview of the package (Up to 35 characters) in Japanese. The words 'AviUtl' is redundant and unnecessary.
      */
     overview: string;
     /**
-     * The description of the package
+     * The description of the package in Japanese. Please explain the function of the package itself, not the problem that this package solves.
      */
     description: string;
     /**
-     * The name of the developer of the package
+     * The name of the developer of the package. Different from id, Japanese can be used.
      */
     developer: string;
     /**
@@ -33,11 +36,11 @@ export interface Packages {
      */
     originalDeveloper?: string;
     /**
-     * ID of the package on which it depends
+     * IDs of the packages on which it depends. Selective dependencies can be written by concatenating multiple IDs with '|'. It is also possible to specify AviUtl or Exedit in formats such as 'aviutl1.10' or 'exedit0.92'.
      */
     dependencies?: string[];
     /**
-     * ID of the package causing the conflict
+     * IDs of the packages causing the conflict
      */
     conflicts?: string[];
     /**
@@ -57,7 +60,7 @@ export interface Packages {
      */
     directURL?: string;
     /**
-     * The latest version of the package
+     * The latest version of the package. If not available, file update date (YYYYY/MM/DD).
      */
     latestVersion: string;
     /**
@@ -73,36 +76,39 @@ export interface Packages {
      */
     installArg?: string;
     /**
-     * Niconi Commons ID (not yet implemented)
+     * Niconi Commons ID
      */
     nicommons?: string;
     /**
      * If this is true, this package will not be visible until it is installed
      */
     isHidden?: boolean;
+    /**
+     * Specify files and folders in the archive; do not specify files and folders that are not related to the operation of the package, such as readme, license, source code.
+     */
     files: {
       /**
-       * The name of the file used in the package
+       * The name of the file used in the package. Unless otherwise indicated in the readme or on the distribution page, if a file has a file extension of '.auf', '.aui', '.auo', '.auc', or '.aul' place all files/folders in the same parent folder as that file into the `plugins/` folder. Unless otherwise indicated in the readme or on the distribution page, if a file has a file extension of '.anm', '.obj', '.cam', '.tra', or '.scn', place all files/folders in the same parent folder as that file into the `script/{developer name in alphanumeric character}/` folder.
        */
       filename: string;
       /**
-       * Whether it is optional during installation (Default: false)
+       * Overwriting prohibited. May not be bundled with archive. e.g., configuration files. (Default: false)
        */
       isUninstallOnly?: boolean;
       /**
-       * Whether the file is a non-uninstallable file (Default: false)
+       * Duplication of this file doesn't mean a conflict. Do not uninstall this file. e.g., shared libraries. (Default: false)
        */
       isInstallOnly?: boolean;
       /**
-       * Whether it is a directory (Default: false)
+       * This is a directory (Default: false)
        */
       isDirectory?: boolean;
       /**
-       * The relative path of the file in the archive (Default: null)
+       * The relative path of the file in the archive, excluding filename (Default: null)
        */
       archivePath?: string;
       /**
-       * Whether it is not included in the latest version (Default: false)
+       * This file is no longer in use and can be safely deleted (Default: false)
        */
       isObsolete?: boolean;
     }[];
