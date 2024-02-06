@@ -41,7 +41,7 @@
             "type": "array",
             "items": {
               "type": "string",
-              "pattern": "^(([A-Za-z0-9]+\\/[A-Za-z0-9]+)|(aviutl[A-Za-z0-9.]+)|(exedit[A-Za-z0-9.]+))(\\|(([A-Za-z0-9]+\\/[A-Za-z0-9]+)|(aviutl[A-Za-z0-9.]+)|(exedit[A-Za-z0-9.]+)))*$"
+              "pattern": "^(([A-Za-z0-9]+\\/[A-Za-z0-9]+((<|<=|=|>=|>)[^<=>&|\\n]+)?)|(aviutl[A-Za-z0-9.]+)|(exedit[A-Za-z0-9.]+))(\\|(([A-Za-z0-9]+\\/[A-Za-z0-9]+((<|<=|=|>=|>)[^<=>&|\\n]+)?)|(aviutl[A-Za-z0-9.]+)|(exedit[A-Za-z0-9.]+)))*$"
             },
             "description": "ID of the package on which it depends"
           },
@@ -49,9 +49,9 @@
             "type": "array",
             "items": {
               "type": "string",
-              "pattern": "^[a-zA-Z0-9]+/[a-zA-Z0-9]+$"
+              "pattern": "^(([A-Za-z0-9]+\\/[A-Za-z0-9]+((<|<=|=|>=|>)[^<=>&|\\n]+)?))(&([A-Za-z0-9]+\\/[A-Za-z0-9]+((<|<=|=|>=|>)[^<=>&|\\n]+)?))*$"
             },
-            "description": "ID of the package causing the conflict (not yet implemented)"
+            "description": "ID of the package causing the conflict"
           },
           "provides": {
             "type": "string",
@@ -79,6 +79,7 @@
           },
           "latestVersion": {
             "type": "string",
+            "pattern": "^[^<=>&|\\n]+$",
             "description": "The latest version of the package"
           },
           "isContinuous": {
@@ -142,6 +143,7 @@
               "properties": {
                 "version": {
                   "type": "string",
+                  "pattern": "^[^<=>&|\\n]+$",
                   "description": "The version of the release"
                 },
                 "integrity": {
