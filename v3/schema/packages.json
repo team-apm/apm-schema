@@ -81,7 +81,7 @@
           "latestVersion": {
             "type": "string",
             "pattern": "^[^<=>&|\\n]+$",
-            "description": "The latest version of the package. If not available, file update date (YYYYY/MM/DD)."
+            "description": "The latest version of the package. If not available, file update date (YYYY/MM/DD)."
           },
           "isContinuous": {
             "type": "boolean",

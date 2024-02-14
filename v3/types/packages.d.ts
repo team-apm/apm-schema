@@ -60,7 +60,7 @@ export interface Packages {
      */
     directURL?: string;
     /**
-     * The latest version of the package. If not available, file update date (YYYYY/MM/DD).
+     * The latest version of the package. If not available, file update date (YYYY/MM/DD).
      */
     latestVersion: string;
     /**
