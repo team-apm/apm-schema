@@ -3,7 +3,8 @@
   "type": "object",
   "properties": {
     "version": {
-      "type": "integer"
+      "type": "integer",
+      "description": "The current schema version is '3'."
     },
     "packages": {
       "type": "array",
@@ -13,25 +14,25 @@
           "id": {
             "type": "string",
             "pattern": "^[a-zA-Z0-9]+/[a-zA-Z0-9]+$",
-            "description": "The ID of the package (Non-duplicated alphanumeric characters. Use a file name that represents the package. If there is no representative name, use the archive file name. If there is a possibility of duplication, such as only one word, prefix it with the developer's name.)"
+            "description": "ID to identify the package. {A: author name in alphanumeric character}/{B: camelcase package name without version number in alphanumeric character}. A: Alphanumeric author names are guessed from the IDs and URLs of social networking sites including Github. If not known, convert the Japanese author name to English or Roman characters. B: Use a file name that represents the package. If there is no representative name, use the archive file name. The words 'AviUtl', 'plugin', and 'script' are redundant and unnecessary."
           },
           "name": {
             "type": "string",
             "maxLength": 25,
-            "description": "The name of the package (Up to 25 characters)"
+            "description": "The name of the package to display (Up to 25 characters). The words 'AviUtl', 'plugin', and 'script' are redundant and unnecessary."
           },
           "overview": {
             "type": "string",
             "maxLength": 35,
-            "description": "The overview of the package (Up to 35 characters)"
+            "description": "The overview of the package (Up to 35 characters) in Japanese. The words 'AviUtl' is redundant and unnecessary."
           },
           "description": {
             "type": "string",
-            "description": "The description of the package"
+            "description": "The description of the package in Japanese. Please explain the function of the package itself, not the problem that this package solves."
           },
           "developer": {
             "type": "string",
-            "description": "The name of the developer of the package"
+            "description": "The name of the developer of the package. Different from id, Japanese can be used."
           },
           "originalDeveloper": {
             "type": "string",
@@ -43,7 +44,7 @@
               "type": "string",
               "pattern": "^(([A-Za-z0-9]+\\/[A-Za-z0-9]+((<|<=|=|>=|>)[^<=>&|\\n]+)?)|(aviutl[A-Za-z0-9.]+)|(exedit[A-Za-z0-9.]+))(\\|(([A-Za-z0-9]+\\/[A-Za-z0-9]+((<|<=|=|>=|>)[^<=>&|\\n]+)?)|(aviutl[A-Za-z0-9.]+)|(exedit[A-Za-z0-9.]+)))*$"
             },
-            "description": "ID of the package on which it depends"
+            "description": "IDs of the packages on which it depends. Selective dependencies can be written by concatenating multiple IDs with '|'. It is also possible to specify AviUtl or Exedit in formats such as 'aviutl1.10' or 'exedit0.92'."
           },
           "conflicts": {
             "type": "array",
@@ -51,7 +52,7 @@
               "type": "string",
               "pattern": "^(([A-Za-z0-9]+\\/[A-Za-z0-9]+((<|<=|=|>=|>)[^<=>&|\\n]+)?))(&([A-Za-z0-9]+\\/[A-Za-z0-9]+((<|<=|=|>=|>)[^<=>&|\\n]+)?))*$"
             },
-            "description": "ID of the package causing the conflict"
+            "description": "IDs of the packages causing the conflict"
           },
           "provides": {
             "type": "string",
@@ -80,7 +81,7 @@
           "latestVersion": {
             "type": "string",
             "pattern": "^[^<=>&|\\n]+$",
-            "description": "The latest version of the package"
+            "description": "The latest version of the package. If not available, file update date (YYYY/MM/DD)."
           },
           "isContinuous": {
             "type": "boolean",
@@ -96,7 +97,7 @@
           },
           "nicommons": {
             "type": "string",
-            "description": "Niconi Commons ID (not yet implemented)"
+            "description": "Niconi Commons ID"
           },
           "isHidden": {
             "type": "boolean",
@@ -104,32 +105,38 @@
           },
           "files": {
             "type": "array",
+            "description": "Specify files and folders in the archive; do not specify files and folders that are not related to the operation of the package, such as readme, license, source code.",
             "items": {
               "type": "object",
               "properties": {
                 "filename": {
                   "type": "string",
-                  "description": "The name of the file used in the package"
+                  "description": "The name of the file used in the package. Unless otherwise indicated in the readme or on the distribution page, if a file has a file extension of '.auf', '.aui', '.auo', '.auc', or '.aul' place all files/folders in the same parent folder as that file into the `plugins/` folder. Unless otherwise indicated in the readme or on the distribution page, if a file has a file extension of '.anm', '.obj', '.cam', '.tra', or '.scn', place all files/folders in the same parent folder as that file into the `script/{developer name in alphanumeric character}/` folder.",
+                  "examples": [
+                    "example.auf",
+                    "plugin/example.auf",
+                    "script/developer_name/example.obj"
+                  ]
                 },
                 "isUninstallOnly": {
                   "type": "boolean",
-                  "description": "Whether it is optional during installation (Default: false)"
+                  "description": "Overwriting prohibited. May not be bundled with archive. e.g., configuration files. (Default: false)"
                 },
                 "isInstallOnly": {
                   "type": "boolean",
-                  "description": "Whether the file is a non-uninstallable file (Default: false)"
+                  "description": "Duplication of this file doesn't mean a conflict. Do not uninstall this file. e.g., shared libraries. (Default: false)"
                 },
                 "isDirectory": {
                   "type": "boolean",
-                  "description": "Whether it is a directory (Default: false)"
+                  "description": "This is a directory (Default: false)"
                 },
                 "archivePath": {
                   "type": "string",
-                  "description": "The relative path of the file in the archive (Default: null)"
+                  "description": "The relative path of the file in the archive, excluding filename (Default: null)"
                 },
                 "isObsolete": {
                   "type": "boolean",
-                  "description": "Whether it is not included in the latest version (Default: false)"
+                  "description": "This file is no longer in use and can be safely deleted (Default: false)"
                 }
               },
               "required": ["filename"],
