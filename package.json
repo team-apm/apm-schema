@@ -1,10 +1,10 @@
 {
   "name": "apm-schema",
   "version": "3.2.1",
-  "repository": "https://github.com/team-apm/apm-schema.git",
-  "author": "Team apm",
-  "license": "CC BY 4.0",
   "private": true,
+  "repository": "https://github.com/team-apm/apm-schema.git",
+  "license": "CC BY 4.0",
+  "author": "Team apm",
   "scripts": {
     "lint": "run-s lint:prettier lint:eslint",
     "lint:prettier": "prettier --check .",
@@ -16,6 +16,13 @@
     "prepare": "husky",
     "release": "release-it"
   },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{json,html,css,md,xml,xsd}": "prettier --write"
+  },
   "devDependencies": {
     "@eslint/js": "^9.16.0",
     "eslint": "^9.16.0",
@@ -26,13 +33,7 @@
     "lint-staged": "^15.2.10",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.4.1",
+    "prettier-plugin-packagejson": "^2.5.6",
     "release-it": "^17.10.0"
-  },
-  "lint-staged": {
-    "*.js": [
-      "prettier --write",
-      "eslint --fix"
-    ],
-    "*.{json,html,css,md,xml,xsd}": "prettier --write"
   }
 }
