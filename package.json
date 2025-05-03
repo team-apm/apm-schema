@@ -24,17 +24,17 @@
     "*.{json,html,css,md,xml,xsd}": "prettier --write"
   },
   "devDependencies": {
-    "@eslint/js": "^9.23.0",
-    "eslint": "^9.23.0",
-    "eslint-config-prettier": "^10.1.1",
+    "@eslint/js": "^9.26.0",
+    "eslint": "^9.26.0",
+    "eslint-config-prettier": "^10.1.2",
     "globals": "^16.0.0",
     "husky": "^9.1.7",
     "json-schema-to-typescript": "^15.0.4",
-    "lint-staged": "^15.5.0",
-    "npm-run-all2": "^7.0.2",
+    "lint-staged": "^15.5.1",
+    "npm-run-all2": "^8.0.1",
     "prettier": "^3.5.3",
     "prettier-plugin-packagejson": "^2.5.10",
-    "release-it": "^18.1.2"
+    "release-it": "^19.0.1"
   },
   "packageManager": "yarn@1.22.22"
 }
