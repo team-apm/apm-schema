@@ -1,10 +1,10 @@
 # apm-schema
 
-[AviUtl Package Manager](https://github.com/hal-shu-sato/apm)のスキーマ
+[AviUtl Package Manager](https://github.com/team-apm/apm)のスキーマ
 
 ## コントリビューション
 
-[CONTRIBUTING.ja.md](https://github.com/hal-shu-sato/apm/blob/main/CONTRIBUTING.ja.md)をご覧ください。
+[CONTRIBUTING.ja.md](https://github.com/team-apm/apm/blob/main/CONTRIBUTING.ja.md)をご覧ください。
 
 ## ライセンス
 
