@@ -680,7 +680,7 @@ destr@^2.0.3:
   resolved "https://registry.yarnpkg.com/destr/-/destr-2.0.5.tgz#7d112ff1b925fb8d2079fac5bdb4a90973b51fdb"
   integrity sha512-ugFTXCtDZunbzasqBxrK93Ik/DRYsO6S/fedkWEMKqt04xZ4csmnmwGDBAb07QWNaGMAmnTIemsYZCksjATwsA==
 
-detect-indent@^7.0.1:
+detect-indent@^7.0.2:
   version "7.0.2"
   resolved "https://registry.yarnpkg.com/detect-indent/-/detect-indent-7.0.2.tgz#16c516bf75d4b2f759f68214554996d467c8d648"
   integrity sha512-y+8xyqdGLL+6sh0tVeHcfP/QDd8gUgbasolJJpY7NgeQGSZ739bDtSiaiDgtoicy+mtYB81dKLxO9xRhCyIB3A==
@@ -948,10 +948,10 @@ giget@^2.0.0:
     nypm "^0.6.0"
     pathe "^2.0.3"
 
-git-hooks-list@^4.0.0:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/git-hooks-list/-/git-hooks-list-4.1.1.tgz#ae340b82a9312354c73b48007f33840bbd83d3c0"
-  integrity sha512-cmP497iLq54AZnv4YRAEMnEyQ1eIn4tGKbmswqwmFV4GBnAqE8NLtWxxdXa++AalfgL5EBH4IxTPyquEuGY/jA==
+git-hooks-list@^4.1.1:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/git-hooks-list/-/git-hooks-list-4.2.1.tgz#82b3ad119ec2da8a6d57228bd68d8e432afc418c"
+  integrity sha512-WNvqJjOxxs/8ZP9+DWdwWJ7cDsd60NHf39XnD82pDVrKO5q7xfPqpkK6hwEAmBa/ZSEE4IOoR75EzbbIuwGlMw==
 
 git-up@^8.1.0:
   version "8.1.1"
@@ -1615,12 +1615,12 @@ prelude-ls@^1.2.1:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
-prettier-plugin-packagejson@^2.5.21:
-  version "2.5.21"
-  resolved "https://registry.yarnpkg.com/prettier-plugin-packagejson/-/prettier-plugin-packagejson-2.5.21.tgz#67c6a1371409e6c400a7f11e0bbcddaed70e090b"
-  integrity sha512-d9ivsysb1SeRaKDhjf6Hi7jBGnP4TVsh7DeVi8N5HtHJ5vwD7YHcQIuy6jRkr2qGW/VKbrEVDWVMODuqcZuz8Q==
+prettier-plugin-packagejson@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-packagejson/-/prettier-plugin-packagejson-3.0.0.tgz#11f64b463b6da8c73ce86dabde529699cde3f6d8"
+  integrity sha512-z8/QmPSqx/ANvvQMWJSkSq1+ihBXeuwDEYdjX3ZjRJ5Ty1k7vGbFQfhzk2eDe0rwS/TNyRjWK/qnjJEStAOtDw==
   dependencies:
-    sort-package-json "3.5.0"
+    sort-package-json "3.6.0"
 
 prettier@^3.2.5, prettier@^3.7.4:
   version "3.7.4"
@@ -1751,7 +1751,7 @@ rxjs@^7.8.2:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-semver@7.7.3, semver@^7.7.1:
+semver@7.7.3, semver@^7.7.3:
   version "7.7.3"
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.7.3.tgz#4b5f4143d007633a8dc671cd0a6ef9147b8bb946"
   integrity sha512-SdsKMrI9TdgjdweUSR9MweHA4EJ8YxHn8DFaDisvhVlUOe4BF1tLD7GAj0lIqWVl+dPb/rExr0Btby5loQm20Q==
@@ -1808,23 +1808,23 @@ socks@^2.8.3:
     ip-address "^10.0.1"
     smart-buffer "^4.2.0"
 
-sort-object-keys@^2.0.0:
+sort-object-keys@^2.0.1:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/sort-object-keys/-/sort-object-keys-2.1.0.tgz#af24fbb7b91fcca945399a04fa900a10f9506242"
   integrity sha512-SOiEnthkJKPv2L6ec6HMwhUcN0/lppkeYuN1x63PbyPRrgSPIuBJCiYxYyvWRTtjMlOi14vQUCGUJqS6PLVm8g==
 
-sort-package-json@3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/sort-package-json/-/sort-package-json-3.5.0.tgz#4838ce7eea4cf1bd195553746c56eed3e8a1db27"
-  integrity sha512-moY4UtptUuP5sPuu9H9dp8xHNel7eP5/Kz/7+90jTvC0IOiPH2LigtRM/aSFSxreaWoToHUVUpEV4a2tAs2oKQ==
+sort-package-json@3.6.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/sort-package-json/-/sort-package-json-3.6.0.tgz#6333552770203a712a13e148a6baf06a164cba15"
+  integrity sha512-fyJsPLhWvY7u2KsKPZn1PixbXp+1m7V8NWqU8CvgFRbMEX41Ffw1kD8n0CfJiGoaSfoAvbrqRRl/DcHO8omQOQ==
   dependencies:
-    detect-indent "^7.0.1"
+    detect-indent "^7.0.2"
     detect-newline "^4.0.1"
-    git-hooks-list "^4.0.0"
+    git-hooks-list "^4.1.1"
     is-plain-obj "^4.1.0"
-    semver "^7.7.1"
-    sort-object-keys "^2.0.0"
-    tinyglobby "^0.2.12"
+    semver "^7.7.3"
+    sort-object-keys "^2.0.1"
+    tinyglobby "^0.2.15"
 
 source-map@~0.6.1:
   version "0.6.1"
@@ -1903,7 +1903,7 @@ tinyexec@^1.0.1:
   resolved "https://registry.yarnpkg.com/tinyexec/-/tinyexec-1.0.2.tgz#bdd2737fe2ba40bd6f918ae26642f264b99ca251"
   integrity sha512-W/KYk+NFhkmsYpuHq5JykngiOCnxeVL8v8dFnqxSD8qEEdRfXk1SDM6JzNqcERbcGYj9tMrDQBYV9cjgnunFIg==
 
-tinyglobby@0.2.15, tinyglobby@^0.2.12, tinyglobby@^0.2.9:
+tinyglobby@0.2.15, tinyglobby@^0.2.15, tinyglobby@^0.2.9:
   version "0.2.15"
   resolved "https://registry.yarnpkg.com/tinyglobby/-/tinyglobby-0.2.15.tgz#e228dd1e638cea993d2fdb4fcd2d4602a79951c2"
   integrity sha512-j2Zq4NyQYG5XMST4cbs02Ak8iJUdxRM0XI5QyxXuZOzKOINmWurp3smXu3y5wDcJrptwpSjgXHzIQxR0omXljQ==
