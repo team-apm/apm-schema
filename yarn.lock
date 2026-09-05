@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@apidevtools/json-schema-ref-parser@^11.5.5":
+"@apidevtools/json-schema-ref-parser@^11.9.3":
   version "11.9.3"
   resolved "https://registry.yarnpkg.com/@apidevtools/json-schema-ref-parser/-/json-schema-ref-parser-11.9.3.tgz#0e0c9061fc41cf03737d499a4e6a8299fdd2bfa7"
   integrity sha512-60vepv88RwcJtSHrD6MjIL6Ta3SOYbgfnkHb+ppAVK+o9mXprRtulx7VlRl3lN3bbvysAfCS7WMVfhUYemB0IQ==
@@ -394,7 +394,7 @@
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.15.tgz#596a1747233694d50f6ad8a7869fcb6f56cf5841"
   integrity sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==
 
-"@types/lodash@^4.17.7":
+"@types/lodash@^4.17.25":
   version "4.17.25"
   resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.17.25.tgz#69765ac7bcddb0eb072961cf292524a8f5b3c2c0"
   integrity sha512-+K1NIO8I+F9/wNulfVvu23QYd0Pe9/OCqRrim4NoYIf1VoEDL90Ve4ClzpyqBLc7NpGGWRvYNCKZ1BE/Jpf8dQ==
@@ -1174,6 +1174,13 @@ js-yaml@^4.1.0, js-yaml@^4.3.0:
   dependencies:
     argparse "^2.0.1"
 
+js-yaml@^5.2.3:
+  version "5.4.1"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-5.4.1.tgz#4629d91d4b4551f300435f0e4127899710f816fb"
+  integrity sha512-28R/k+NAjeuf7+CKlTxWZVExJGwVVLwY06DgEnOMz2gEpfNkDcD7QvyiVPT0xy0XXhU8vHsd4Ot42OOPdJG7dQ==
+  dependencies:
+    argparse "^2.0.1"
+
 json-buffer@3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/json-buffer/-/json-buffer-3.0.1.tgz#9338802a30d3b6605fbe0613e094008ca8c05a13"
@@ -1184,20 +1191,19 @@ json-parse-even-better-errors@^4.0.0:
   resolved "https://registry.yarnpkg.com/json-parse-even-better-errors/-/json-parse-even-better-errors-4.0.0.tgz#d3f67bd5925e81d3e31aa466acc821c8375cec43"
   integrity sha512-lR4MXjGNgkJc7tkQ97kb2nuEMnNCyU//XYVH0MKTGcXEiSudQ5MKGKen3C5QubYy0vmq+JGitUg92uuywGEwIA==
 
-json-schema-to-typescript@^15.0.4:
-  version "15.0.4"
-  resolved "https://registry.yarnpkg.com/json-schema-to-typescript/-/json-schema-to-typescript-15.0.4.tgz#a530c7f17312503b262ae12233749732171840f3"
-  integrity sha512-Su9oK8DR4xCmDsLlyvadkXzX6+GGXJpbhwoLtOGArAG61dvbW4YQmSEno2y66ahpIdmLMg6YUf/QHLgiwvkrHQ==
+json-schema-to-typescript@^16.0.0:
+  version "16.0.0"
+  resolved "https://registry.yarnpkg.com/json-schema-to-typescript/-/json-schema-to-typescript-16.0.0.tgz#ba9794144e3739649150b97e6619f28d65e9b757"
+  integrity sha512-Ah6kK4q6SjlMzWBH1eNOQkdRh5Qhr5T/RCFwfjQqWZA7UDW+N47A8wfyoiN0L884s4L4bAEI54IjIuN3/u0B/A==
   dependencies:
-    "@apidevtools/json-schema-ref-parser" "^11.5.5"
+    "@apidevtools/json-schema-ref-parser" "^11.9.3"
     "@types/json-schema" "^7.0.15"
-    "@types/lodash" "^4.17.7"
-    is-glob "^4.0.3"
-    js-yaml "^4.1.0"
-    lodash "^4.17.21"
+    "@types/lodash" "^4.17.25"
+    js-yaml "^5.2.3"
+    lodash "^4.18.1"
     minimist "^1.2.8"
-    prettier "^3.2.5"
-    tinyglobby "^0.2.9"
+    prettier "^3.9.6"
+    tinyglobby "^0.2.17"
 
 json-schema-traverse@^0.4.1:
   version "0.4.1"
@@ -1290,7 +1296,7 @@ lodash.uniqby@^4.7.0:
   resolved "https://registry.yarnpkg.com/lodash.uniqby/-/lodash.uniqby-4.7.0.tgz#d99c07a669e9e6d24e1362dfe266c67616af1302"
   integrity sha512-e/zcLx6CSbmaEgFHCA7BnoQKyCtKMxnuWrJygbwPs/AIn+IMKl66L8/s+wBUn5LRw2pZx3bUHibiV1b6aTWIww==
 
-lodash@^4.15.0, lodash@^4.17.21:
+lodash@^4.15.0, lodash@^4.18.1:
   version "4.18.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.18.1.tgz#ff2b66c1f6326d59513de2407bf881439812771c"
   integrity sha512-dMInicTPVE8d1e5otfwmmjlxkZoUpiVLwyeTdUsi/Caj/gfzzblBcCE5sRHV/AsjuCmxWrte2TNGSYuCeCq+0Q==
@@ -1613,7 +1619,7 @@ prettier-plugin-packagejson@^3.0.2:
   dependencies:
     sort-package-json "^3.6.0"
 
-prettier@^3.2.5, prettier@^3.9.6:
+prettier@^3.9.6:
   version "3.9.6"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.9.6.tgz#b3ea5146515d40fc53f18aa63f74dfab1e10dbf6"
   integrity sha512-OpN0zzVdiaiAhxpuuj5efpIS4sY9j7bY6uR5mnj5yPzGkdkjNKSJeUThPb60Jw29QuAZgA4o+/iB49kFiaBX6g==
@@ -1915,7 +1921,7 @@ tinyglobby@0.2.15:
     fdir "^6.5.0"
     picomatch "^4.0.3"
 
-tinyglobby@^0.2.15, tinyglobby@^0.2.9:
+tinyglobby@^0.2.15, tinyglobby@^0.2.17:
   version "0.2.17"
   resolved "https://registry.yarnpkg.com/tinyglobby/-/tinyglobby-0.2.17.tgz#562a9a6c9eb2b3b123d39719f9af5bb44fcd7631"
   integrity sha512-wXR/dYpcqKmfWpEdZjiKJOwCNFndD0DMnrW/cYjVGttEkBfVgcLFHoNrlj47mjOVic9yyNu65alsgF4NQyTa2g==
